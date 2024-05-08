@@ -24,9 +24,15 @@ function launchGame(id){
         .then((response)=>{
             console.log("response:",response);
             $('#gameContent').html(response);
-            var scriptElement = document.createElement('script');
-            scriptElement.src = response;
-            document.head.appendChild(scriptElement);
+            try{
+                var jsonResponse = JSON.parse(response);
+            }catch(error){
+                console.log(error)
+                var scriptElement = document.createElement('script');
+                scriptElement.src = response;
+                document.head.appendChild(scriptElement);
+            }
+           
           })
 }
 
