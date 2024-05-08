@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="alert alert-primary" role="alert">
+  {{data.info}}
+</div>
+<div class="panel">
+    <button  onclick="changeMaintananceMode(1)" type="button" class="btn btn-secondary">Maintanance mode ON</button>
+    <button  onclick="changeMaintananceMode(0)" type="button" class="btn btn-secondary">Maintanance mode OFF</button>
+</div>
+
+{% endblock %}

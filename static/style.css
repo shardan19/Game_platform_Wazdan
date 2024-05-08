@@ -1,0 +1,9 @@
+.content-page{
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 3em;
+}
+.gamecard:hover{
+    cursor:pointer
+}
+
